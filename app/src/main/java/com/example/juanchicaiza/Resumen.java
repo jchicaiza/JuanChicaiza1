@@ -19,6 +19,7 @@ public class Resumen extends AppCompatActivity {
         setContentView(R.layout.activity_resumen);
         usuarioConectado=findViewById(R.id.etUContectado);
         nombreConectado=findViewById(R.id.etNombreCon);
+
         resumen=findViewById(R.id.etRespuesta);
         respuestaFut=findViewById(R.id.etFut);
         respuestaTen=findViewById(R.id.etTen);
@@ -28,12 +29,21 @@ public class Resumen extends AppCompatActivity {
 
 
         String recibirNombre = getIntent().getStringExtra("Juan");
+
+        String recibirRes = getIntent().getStringExtra("");
         String recibirFut = getIntent().getStringExtra("");
         String recibirTen = getIntent().getStringExtra("");
         String recibirBalo = getIntent().getStringExtra("");
         String recibirSiNo = getIntent().getStringExtra("");
 
         usuarioConectado.setText(recibirNombre);
+
+        resumen.setText(recibirRes);
+        respuestaFut.setText(recibirFut);
+        respuestaTen.setText(recibirTen);
+        respuestaBalo.setText(recibirBalo);
+        respuestaSi.setText(recibirSiNo);
+
     }
     public void regresar (View view){
         Intent intent = new Intent(Resumen.this, Encuesta.class);
