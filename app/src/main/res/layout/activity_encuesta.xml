@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
+    tools:context=".Encuesta">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginBottom="169dp"
+        app:srcCompat="@drawable/img2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etRespuesta"
+        android:layout_centerInParent="true"
+        android:text=" ¿Por qué eligió este centro educativo? "
+        android:textColor="#0A0808"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etRespuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/textView2"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=" ¿Qué deportes practica? "
+        android:layout_above="@+id/ckbFutbol"
+        android:textColor="#0A0808"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/ckbFutbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ckbTenis"
+        android:layout_centerInParent="true"
+        android:text="Futbol" />
+
+    <CheckBox
+        android:id="@+id/ckbTenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ckbBaloncesto"
+        android:layout_centerInParent="true"
+        android:text="Tenis" />
+
+    <CheckBox
+        android:id="@+id/ckbBaloncesto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/textView3"
+        android:text="Baloncesto" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ¿Está interesado en aprender otro idioma aparte de inglés.? "
+        android:layout_above="@+id/RadioGruop"
+        android:textColor="#0A0808"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <RadioGroup
+        android:id="@+id/RadioGruop"
+        android:layout_width="96dp"
+        android:layout_height="114dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/btnEnviarEncuesta">
+
+        <CheckBox
+            android:id="@+id/rbSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SI" />
+
+        <CheckBox
+            android:id="@+id/rbNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NO" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnEnviarEncuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="EnviarEncuesta"
+        android:text="ENVIAR" />
+
+
+
+
+</RelativeLayout>
